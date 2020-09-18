@@ -17,11 +17,11 @@ class GroovyFileRule implements IRule {
 
     @Override
     public void printInfo() {
-        log.info("这是一段来自Groovy文件的代码33333");
+        log.info("这是一段来自Groovy文件的代码3434343434");
         printInfoHigh();
     }
 
     public void printInfoHigh() {
-        log.info("这是一段来自Groovy文件的代码的代码44444");
+        log.info("这是一段来自Groovy文件的代码的代码4343433434");
     }
 }

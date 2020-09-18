@@ -8,8 +8,12 @@
                         http://www.springframework.org/schema/lang/spring-lang.xsd">
 
     <!-- groovy文件定义为bean -->
-    <lang:groovy id="springGroovyRule" refresh-check-delay="1000"
-                 script-source="file:src/main/resources/groovy/SpringGroovyRule.groovy">
-    </lang:groovy>
+<!--    <lang:groovy id="springGroovyRule" refresh-check-delay="1000"-->
+<!--                 script-source="file:src/main/resources/groovy/SpringGroovyRule.groovy">-->
+<!--    </lang:groovy>-->
+
+
+    <bean class="com.conlin.service.GroovyFactory"></bean>
+    <bean class="org.springframework.scripting.support.ScriptFactoryPostProcessor"/>
 
 </beans>
