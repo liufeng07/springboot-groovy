@@ -1,10 +1,11 @@
 package com.conlin.service;
 
-import com.conlin.service.impl.NormalJavaRule;
-
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 反射生成接口工厂
+ */
 public class RuleFactory {
     private static volatile RuleFactory singleton = null;
 
@@ -27,14 +28,19 @@ public class RuleFactory {
     public List<IRule> getRuleList() throws Exception {
         //调用普通的JAVA实现做对比
         List<IRule> rules = new ArrayList<>();
-        NormalJavaRule normalJavaRule = new NormalJavaRule();
-        rules.add(normalJavaRule);
-
         //直接读取Groovy文件生成IRule实现
         IRule groovyFile = GroovyFactory.getInstance()
                 .getIRuleFromPackage("src/main/resources/groovy/GroovyFileRule.groovy");
         rules.add(groovyFile);
+        return rules;
+    }
 
+    public List<IRule2> getRuleList2() throws Exception {
+        List<IRule2> rules = new ArrayList<>();
+        //直接读取Groovy文件生成IRule2实现
+        IRule2 groovyFile = GroovyFactory.getInstance()
+                .getIRuleFromPackage("src/main/resources/groovy/GroovyFileRule2.groovy");
+        rules.add(groovyFile);
         return rules;
     }
 }

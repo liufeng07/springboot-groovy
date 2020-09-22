@@ -18,10 +18,5 @@ class SpringGroovyRule implements IRule {
     @Override
     public void printInfo() {
         log.info("这是一段Spring的Groovy代码");
-        printInfoHigh();
-    }
-
-    public void printInfoHigh() {
-        log.info("这是一段Spring的Groovy代码的代码");
     }
 }

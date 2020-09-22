@@ -13,7 +13,9 @@
 <!--    </lang:groovy>-->
 
 
-    <bean class="com.conlin.service.GroovyFactory"></bean>
-    <bean class="org.springframework.scripting.support.ScriptFactoryPostProcessor"/>
+<!--    <bean class="com.conlin.service.GroovyFactory">-->
+<!--        <property name="directory" value="groovy"/>-->
+<!--    </bean>-->
+<!--    <bean class="org.springframework.scripting.support.ScriptFactoryPostProcessor"/>-->
 
 </beans>

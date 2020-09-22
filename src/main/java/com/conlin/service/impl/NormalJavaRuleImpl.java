@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 /**
  * JAVA普通实现
  */
-public class NormalJavaRule implements IRule {
+public class NormalJavaRuleImpl implements IRule {
     private Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Override
